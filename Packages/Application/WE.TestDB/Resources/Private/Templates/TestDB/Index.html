@@ -1,0 +1,25 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of test dbs</f:section>
+
+<f:section name="Content">
+	<f:if condition="{testDBs}">
+		<f:then>
+			<ul>
+				<f:for each="{testDBs}" as="testDB">
+					<li>
+						<f:link.action action="show" arguments="{testDB: testDB}">{testDB.name}</f:link.action>
+						<f:link.action action="edit" arguments="{testDB: testDB}">Edit</f:link.action>
+						<f:form action="delete" arguments="{testDB: testDB}">
+							<f:form.submit value="Delete" />
+						</f:form>
+					</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			<p>No test dbs created yet.</p>
+		</f:else>
+	</f:if>
+	<p><f:link.action action="new">Create a new test db</f:link.action></p>
+</f:section>

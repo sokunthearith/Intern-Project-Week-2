@@ -1,0 +1,20 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New test db</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new test db:</p>
+
+	<f:form action="create" objectName="newTestDB">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>

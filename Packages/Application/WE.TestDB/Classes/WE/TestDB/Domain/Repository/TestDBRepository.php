@@ -1,0 +1,19 @@
+<?php
+namespace WE\TestDB\Domain\Repository;
+
+/*                                                                        *
+ * This script belongs to the TYPO3 Flow package "WE.TestDB".             *
+ *                                                                        *
+ *                                                                        */
+
+use TYPO3\Flow\Annotations as Flow;
+use TYPO3\Flow\Persistence\Repository;
+
+/**
+ * @Flow\Scope("singleton")
+ */
+class TestDBRepository extends Repository {
+
+	// add customized methods here
+
+}
